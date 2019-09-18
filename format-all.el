@@ -380,10 +380,16 @@ Consult the existing formatters for examples of BODY."
   (:modes bazel-mode)
   (:format (format-all--buffer-easy executable)))
 
-(define-format-all-formatter brittany
-  (:executable "brittany")
-  (:install "stack install brittany")
-  (:modes haskell-mode literate-haskell-mode)
+;; (define-format-all-formatter brittany
+;;   (:executable "brittany")
+;;   (:install "stack install brittany")
+;;   (:modes haskell-mode literate-haskell-mode)
+;;   (:format (format-all--buffer-easy executable)))
+
+(define-format-all-formatter ormolu
+  (:executable "ormolu")
+  (:install "false")
+  (:modes haskell-mode)
   (:format (format-all--buffer-easy executable)))
 
 (define-format-all-formatter clang-format
